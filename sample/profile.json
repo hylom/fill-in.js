@@ -1,0 +1,39 @@
+{
+  "title": "Profile",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "description": "your first name",
+      "examples": [ "Jane" ],
+      "priority": 10
+    },
+    "lastName": {
+      "type": "string",
+      "description": "your last name",
+      "examples": [ "Doe" ],
+      "priority": 20
+    },
+    "age": {
+      "type": "integer",
+      "description": "your age",
+      "examples": [ 30 ],
+      "priority": 30
+    },
+    "gender": {
+      "type": "string",
+      "description": "your gender",
+      "enum": [ "male", "female", "other" ],
+      "priority": 40
+    },
+    "hobbies": {
+      "type": "array",
+      "description": "your hobbies",
+      "items": {
+        "type": "string",
+      "priority": 50
+      }
+    }
+  },
+  "required": [ "firstName", "lastName", "gender" ]
+}
