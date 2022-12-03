@@ -6,12 +6,14 @@
       "type": "string",
       "description": "your first name",
       "examples": [ "Jane" ],
+      "minLength": 1,
       "priority": 10
     },
     "lastName": {
       "type": "string",
       "description": "your last name",
       "examples": [ "Doe" ],
+      "minLength": 1,
       "priority": 20
     },
     "age": {
@@ -33,7 +35,13 @@
         "type": "string",
       "priority": 50
       }
+    },
+    "public": {
+      "type": "boolean",
+      "description": "make your profile public",
+      "priority": 60,
+      "default": false
     }
   },
-  "required": [ "firstName", "lastName", "gender" ]
+  "required": [ "firstName", "lastName", "gender", "hobbies", "public" ]
 }

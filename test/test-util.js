@@ -13,3 +13,15 @@ function _getSampleDir() {
   const relDir = path.join(thisDir, '..', 'sample');
   return path.normalize(relDir);
 }
+
+export function delayedWrite(stdin, wait, interval, items) {
+  const queue = Array.from(items);
+  const next = () => {
+    stdin.send(queue.shift());
+    stdin.send('\r');
+    if (queue.length) {
+      setTimeout(next, interval);
+    }
+  };
+  setTimeout(next, wait);
+}
