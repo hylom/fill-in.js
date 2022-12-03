@@ -7,39 +7,39 @@
       "description": "your first name",
       "examples": [ "Jane" ],
       "minLength": 1,
-      "priority": 10
+      "order": 10
     },
     "lastName": {
       "type": "string",
       "description": "your last name",
       "examples": [ "Doe" ],
       "minLength": 1,
-      "priority": 20
+      "order": 20
     },
     "age": {
       "type": "integer",
       "description": "your age",
       "examples": [ 30 ],
-      "priority": 30
+      "order": 30
     },
     "gender": {
       "type": "string",
       "description": "your gender",
       "enum": [ "male", "female", "other" ],
-      "priority": 40
+      "order": 40
     },
     "hobbies": {
       "type": "array",
       "description": "your hobbies",
+      "order": 50,
       "items": {
-        "type": "string",
-      "priority": 50
+        "type": "string"
       }
     },
     "public": {
       "type": "boolean",
       "description": "make your profile public",
-      "priority": 60,
+      "order": 60,
       "default": false
     }
   },
