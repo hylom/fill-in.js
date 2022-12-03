@@ -7,7 +7,7 @@ test('fill in with "Person" schema', async () => {
   const schema = await loadSampleJson('profile');
 
   const stdin = mockStdin.stdin();
-  delayedWrite(stdin, 1000, 100,
+  delayedWrite(stdin, 100, 10,
                ['first', 'last', '10', 'male', 'aaa', 'bbb', '', 'yes']);
   const result = await fillIn(schema);
   stdin.restore();
@@ -19,4 +19,22 @@ test('fill in with "Person" schema', async () => {
   expect(result).toHaveProperty('gender', 'male');
   expect(result).toHaveProperty('hobbies', ['aaa', 'bbb']);
   expect(result).toHaveProperty('public', true);
+});
+
+test('fill in with "Person" schema with onlyRequired', async () => {
+  const schema = await loadSampleJson('profile');
+
+  const stdin = mockStdin.stdin();
+  delayedWrite(stdin, 100, 10,
+               ['first', 'last', 'no']);
+  const result = await fillIn(schema, { onlyRequired: true });
+  stdin.restore();
+  //console.log(result);
+
+  expect(result).toHaveProperty('firstName', 'first');
+  expect(result).toHaveProperty('lastName', 'last');
+  expect(result).not.toHaveProperty('age');
+  expect(result).not.toHaveProperty('gender');
+  expect(result).not.toHaveProperty('hobbies');
+  expect(result).toHaveProperty('public', false);
 });

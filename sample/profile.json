@@ -43,5 +43,5 @@
       "default": false
     }
   },
-  "required": [ "firstName", "lastName", "gender", "hobbies", "public" ]
+  "required": [ "firstName", "lastName", "public" ]
 }
