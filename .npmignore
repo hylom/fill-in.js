@@ -3,5 +3,6 @@
 node_modules
 *.test.json
 sample
+example
 test
 jest.comfig.js
