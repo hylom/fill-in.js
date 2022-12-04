@@ -109,6 +109,8 @@ See `sample` directory.
 #### Available options:
 
  - `option.onlyRequired`: `boolean`. If `true`, only process `required` properties. Default: `false`
+ - `option.defaults`: `object`. If this value is given, use this object's each property as default value. Default: `undefined`
+ - `option.ignoreDefaultProperty`: `boolean`. If `true`, ignore all `default` properties in input JSON Schema. Default: `false`
  
 
 ## License
@@ -117,7 +119,9 @@ MIT License.
 
 ## ChangeLog
 
+ - v1.0.2 - 2022-12-04
+   - support `defaults` and `ignoreDefaultProperty` options
  - v1.0.1 - 2022-12-04
-  - fix documentation and publish settings
-- v1.0.0 - 2022-12-04
-  - Initial public release
+   - fix documentation and publish settings
+ - v1.0.0 - 2022-12-04
+   - Initial public release
