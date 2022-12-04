@@ -1,16 +1,22 @@
-# fillin.js
+# fill-in.js
 
 Interactive fill in via stdin and generate JSON from the input, based on JSON schema.
 
+## Install
+
+```
+$ npm i fill-in
+```
+
 ## TL;DR: 
 
- - This is a JSON format configuration file gemerator.
+ - This is a JavaScript object generator.
  - Takes JavaScript object in JSON Schema format that defines the configuration file format.
- - Interactively prompts the userer and generates a configuration file according to the input JavaScript object and user input.
+ - Interactively prompts the userer and generates a configuration file according to the JSON Schema and user input.
 
 ## Example
 
-```
+```javascript
 import { fillIn } from 'fill-in';
 
 async function main() {
@@ -69,7 +75,7 @@ async function main() {
 main();
 ```
 
-```
+```bash
 $ node example/profile-generate.js
 your first name: John
 your last name: Smith
@@ -108,3 +114,10 @@ See `sample` directory.
 ## License
 
 MIT License.
+
+## ChangeLog
+
+ - v1.0.1 - 2022-12-04
+  - fix documentation and publish settings
+- v1.0.0 - 2022-12-04
+  - Initial public release

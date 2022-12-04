@@ -1,19 +1,26 @@
 {
-  "name": "interactive-json-gen",
+  "name": "fill-in",
   "type": "module",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "interactive fill in via stdin and generate JSON from the input, based on JSON schema",
+  "main": "lib/fill-in.js",
   "directories": {
     "lib": "lib",
-    "test": "test"
+    "test": "test"    
   },
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["stdin", "JSON"],
+  "author": {
+    "name": "hylom (Hiromichi Matsushima)",
+    "email": "hylom@hylom.net"
+  },
+  "license": "MIT",
+  "reoisitory": {
+    "type": "git",
+    "url": "https://github.com/hylom/fill-in.js"
+  },
   "devDependencies": {
     "jest": "^29.3.1",
     "mock-stdin": "^1.0.0"
